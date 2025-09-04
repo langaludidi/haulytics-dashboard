@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #1e40af; /* Dark blue */
+    --secondary-color: #9333ea; /* Purple */
+    --accent-color: #10b981; /* Green */
+    --background-color: #f3f4f6; /* Light gray */
+  }
+
+  body {
+    @apply bg-[var(--background-color)] text-gray-800;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-lg transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply shadow-xl transform scale-105;
+  }
+}
